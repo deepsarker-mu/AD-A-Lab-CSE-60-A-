@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std ;
+int grid[10][10];
+//void addEdge (int begin, int end){
+//grid [begin][end]=1;
+//grid [end][begin]=1;
+
+//}
+int main()
+{
+     int vertex, edges;
+     cin>>vertex>>edges;
+     int source, destination;
+     for ( int i=1; i<=edges ; i++)
+        {
+     cin>> source >> destination ;
+     //addEdge (source, destination);
+    grid [source][destination]=1;
+    grid [destination][source]=1;
+
+     }
+     for (int i=0; i<vertex; i++){
+        for (int j=0; j<vertex; j++)
+       {
+           printf("%d", grid [i][j]);
+     }
+     cout << "\n";
+}
+
+return 0;
+}
